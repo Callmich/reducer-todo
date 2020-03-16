@@ -11,7 +11,13 @@ const ToDoList = props => {
     
     return (
         <div>
-            <Todo/> {/*need to map through and pass nec props*/}
+            {state.map(task => (
+                <Todo
+                    key={task.id}
+                    item={task.item}
+                />
+            ))}
+            
             <button> 
                 Clear Finished Tasks
              </button> {/*need on click to clear */}
