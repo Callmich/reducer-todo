@@ -7,7 +7,7 @@ import { stateReducer, initialState } from '../reducers/StateReducer'
 
 const ToDoList = props => {
     const [state, dispatch] = useReducer(stateReducer, initialState);
-    console.log(state);
+    // console.log(state);
     
     return (
         <div>

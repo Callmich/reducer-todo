@@ -4,9 +4,21 @@ export const initialState = [{
     item: 'Learn about Reducers',
     completed: false,
     id: 3892987589
-},];
+}];
 
 export const stateReducer = (state, action) => {
-    state = {...initialState}
-    return state;
+    switch(action.type){
+        case 'ADD_TASK':
+            const newTask ={
+                item: action.payload,
+                completed: false,
+                id: new Date()
+            }
+            return {
+                ...state.push(newTask) 
+            }
+            
+    default:
+        return state;
+}
 }
