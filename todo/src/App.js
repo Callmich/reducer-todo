@@ -29,7 +29,7 @@ function App() {
         />
         <button onClick={() => dispatch({ type: 'ADD_TASK', payload: newTask })} type='submit'>Add</button>
         <ToDoList item={item} dispatch={dispatch}/>
-        <button onClick={() => dispatch({ type: 'CLEAR', payload: newTask })}>Clear</button>
+        <button onClick={() => dispatch({ type: 'CLEAR', payload: newTask })}>Clear Finished Tasks</button>
       </form>
     </div>
   );
