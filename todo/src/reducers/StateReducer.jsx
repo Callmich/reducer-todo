@@ -17,8 +17,14 @@ export const stateReducer = (state, action) => {
             return {
                 ...state.push(newTask) 
             }
+
+        // case 'FINNISH_TASK':
+        //     return {
+        //         ...state,
+        //         completed: !completed
+        //     }
             
-    default:
-        return state;
+        default:
+            return initialState;
 }
 }

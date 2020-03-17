@@ -1,26 +1,16 @@
 import React, { useState, useReducer }from 'react';
 import Todo from './ToDo';
 
-import { stateReducer, initialState } from '../reducers/StateReducer'
 
-// import Button from '@material-ui/core/Button';
-
-const ToDoList = props => {
-    const [state, dispatch] = useReducer(stateReducer, initialState);
-    // console.log(state);
-    
+const ToDoList = (props) => {
     return (
         <div>
-            {state.map(task => (
+            {props.item.map(item => (
                 <Todo
-                    key={task.id}
-                    item={task.item}
+                    dispatch={props.dispatch}
+                    item={item}
                 />
             ))}
-            
-            <button> 
-                Clear Finished Tasks
-             </button> {/*need on click to clear */}
         </div>
     )
 }
